@@ -42,7 +42,7 @@ def loadConcrete(data_path, Shuffle = True):
     return X, Y
 
 def loadGaz(data_path, Shuffle = True):
-    df = pd.read_csv(os.path.join(data_path, "gt_2011.csv"), )
+    df = pd.read_csv(os.path.join(data_path, "pp_gas_emission/gt_2011.csv"), )
     df = df.values
     X = df[:,:9]
     X = X.astype(np.float32)
@@ -66,7 +66,7 @@ def loadGridElec(data_path, Shuffle = True):
     return X, Y
 
 def loadMusic(data_path, Shuffle = True):
-    df = pd.read_csv(os.path.join(data_path, "default_features_1059_tracks.txt"), sep = ",")
+    df = pd.read_csv(os.path.join(data_path, "Geographical Original of Music/default_features_1059_tracks.txt"), sep = ",")
     df = df.values
     X = df[:,:8]
     X = X.astype(np.float32)
@@ -78,7 +78,7 @@ def loadMusic(data_path, Shuffle = True):
     return X, Y
 
 def loadSuperConductor(data_path, Shuffle = True):
-    df = pd.read_csv(os.path.join(data_path, "train.csv"), sep = ",")
+    df = pd.read_csv(os.path.join(data_path, "superconduct/train.csv"), sep = ",")
     df = df.values
     X = df[:,:81]
     X = X.astype(np.float32)
